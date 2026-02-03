@@ -34,13 +34,6 @@ enabled = true
 storage_aws_role_arn = "arn:aws:iam::905418117571:role/telecom"
 storage_allowed_locations = ("s3://telecom-airtel/Billing/");
 
-create or replace storage integration billing_int
-type = external_stage
-storage_provider = s3
-enabled = true
-storage_aws_role_arn = "arn:aws:iam::905418117571:role/telecom"
-storage_allowed_locations = ("s3://telecom-airtel/Billing/");
-
 create or replace stage billing_stage
 url = 's3://telecom-airtel/Billing/'
 storage_integration = billing_int
